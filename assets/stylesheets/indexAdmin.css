@@ -1,0 +1,174 @@
+.main {
+  padding: 100px 0 0 0;
+  position: relative;
+  z-index: 0;
+}
+.main .tab__wrapper {
+  width: 100%;
+}
+.main .tab__contain {
+  width: 100%;
+  flex-flow: row wrap;
+}
+.main .tab__contain .post__wrapper {
+  width: 100%;
+  padding: 15px;
+}
+.main .tab__contain .post__wrapper .post {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.main .tab__contain .post__wrapper .post .post__img {
+  width: 25%;
+  align-self: center;
+}
+.main .tab__contain .post__wrapper .post .post__img img {
+  width: 100%;
+}
+.main .tab__contain .post__wrapper .post .post__content {
+  width: 75%;
+  padding: 0 10px;
+}
+.main .tab__contain .post__wrapper .post .post__content .post__title p {
+  font-size: 22px;
+}
+.main .tab__contain .post__wrapper .post .post__content .post__tags {
+  padding: 10px 0;
+}
+.main .tab__contain .add__wrapper {
+  width: 100%;
+  padding: 15px;
+}
+.main .tab__contain .add__wrapper .add {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .tab__contain .add__wrapper .add .add__img {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.main .tab__contain .add__wrapper .add .add__img input {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.main .tab__contain .add__wrapper .add .add__body {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--left {
+  width: 50%;
+  padding-right: 7.5px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--left input {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--left textarea {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right {
+  width: 50%;
+  padding-left: 7.5px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .about__wrapper {
+  width: 100%;
+  padding: 5px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .about__wrapper .about {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .about__wrapper .about input[type=checkbox] {
+  width: 10%;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .about__wrapper .about label {
+  width: 20%;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .about__wrapper .about input[type=text],
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .about__wrapper .about input[type=date] {
+  width: 70%;
+  padding: 2px 5px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .tags__wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .tags__wrapper .tag {
+  width: calc(100% / 4);
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .other__wrapper {
+  width: 100%;
+  padding: 5px;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .other__wrapper .other {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .other__wrapper .other label {
+  width: 30%;
+}
+.main .tab__contain .add__wrapper .add .add__body .add__body--right .group__wrapper .other__wrapper .other input[type=number] {
+  width: 70%;
+  padding: 2px 5px;
+}
+.main .tab__contain .pagination {
+  width: 100%;
+  padding: 15px;
+}
+.main .tab__contain .pagination .page--active {
+  background-color: #0674ea;
+  color: white;
+}
+.main .tab__contain .pagination ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.main .tab__contain .pagination ul li {
+  width: 5%;
+  padding: 10px;
+  text-align: center;
+}
+.main .tab__contain .pagination ul li a {
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  width: 40px;
+  line-height: 40px;
+}

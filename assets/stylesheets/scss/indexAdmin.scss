@@ -1,0 +1,206 @@
+@mixin input {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.main{
+  padding: 100px 0 0 0;
+  position: relative;
+  z-index: 0;
+
+  .tab__wrapper{
+    width: 100%;
+  }
+
+  .tab__contain{
+    width: 100%;
+    flex-flow: row wrap;
+
+    .post__wrapper{
+      width: 100%;
+      padding: 15px;
+
+      .post{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .post__img{
+          width: 25%;
+          align-self: center;
+
+          img{
+            width: 100%;
+          }
+        }
+
+        .post__content{
+          width: 75%;
+          padding: 0 10px;
+
+          .post__title{
+            p{
+              font-size: 22px;
+            }
+          }
+
+          .post__tags{
+            padding: 10px 0;
+          }
+
+          .post__btn{
+
+          }
+        }
+      }
+    }
+
+    .add__wrapper{
+      width: 100%;
+      padding: 15px;
+
+      .add{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .add__img{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 15px;
+
+          input{
+            @include input;
+          }
+        }
+
+        .add__body{
+          display: flex;
+          flex-flow: row nowrap;
+
+          .add__body--left{
+            width: 50%;
+            padding-right: 7.5px;
+
+            input{
+              @include input;
+            }
+
+            textarea{
+              @include input;
+            }
+          }
+
+          .add__body--right{
+            width: 50%;
+            padding-left: 7.5px;
+
+            .group__wrapper{
+              margin-top: 5px;
+              margin-bottom: 15px;
+              width: 100%;
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              padding: 10px;
+              border-radius: 5px;
+
+              .about__wrapper{
+                width: 100%;
+                padding: 5px;
+               
+                .about{
+                  padding:5px;
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  display: flex;
+                  flex-flow: row nowrap;
+                  align-items: center;
+
+                  input[type="checkbox"]{
+                    width: 10%;
+                  }
+
+                  label{
+                    width: 20%;
+                  }
+
+                  input[type="text"],
+                  input[type="date"]{
+                    width: 70%;
+                    padding: 2px 5px;
+                  }
+                }
+              }
+
+              .tags__wrapper{
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+
+                .tag{
+                  width: calc(100% / 4);
+                }
+              }
+
+              .other__wrapper{
+                width: 100%;
+                padding: 5px;
+
+                .other{
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  padding: 5px;
+                  width: 100%;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  align-items: center;
+
+                  label{
+                    width: 30%;
+                  }
+
+                  input[type="number"]{
+                    width: 70%;
+                    padding: 2px 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination{
+      width: 100%;
+      padding: 15px;
+  
+      .page--active{
+        background-color: #0674ea;
+        color: white;
+      }
+      ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        li{
+          width: 5%;
+          padding: 10px;
+          text-align: center;
+          a{
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            width: 40px;
+            line-height: 40px;
+            // cursor: pointer;
+          }
+          
+        }
+      }
+    }
+  }
+}

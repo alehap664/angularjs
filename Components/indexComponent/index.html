@@ -1,0 +1,37 @@
+
+  <section class="header">
+    <div class="header_bg"></div>
+    <div class="header_content">
+      <div class="container">
+        <div class="row header_content_wrapper"><span class="slogan_title">LinkNeverDie</span><span class="slogan_content">Cộng đồng chia sẻ nguồn giải trí và kiến thức công nghệ.</span><span class="slogan_mini_content">"NOTHING IS ABSOLUTE, NOTHING IS FOREVER, NOTHING FROM NOTHING"</span></div>
+      </div>
+    </div>
+    <div class="header_search_box">
+      <div class="container search_box">
+        <div class="row">
+          <form method="get">
+            <input class="text_field" type="text" name="search" ng-model = "search" placeholder="Bạn đang tìm kiếm nội dung gì?" autocomplete="off">
+            <select class="select_field" name="category" ng-model = "category">
+              <option value="">Tất cả</option>
+              <option value="game">Game</option>
+              <option value="software">Phần Mềm</option>
+            </select>
+            <div class="search_box_search_btn">
+              <a href="#!/search?search={{search}}&category={{category}}&tag={{search + category}}&page=1">Tìm Kiếm</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main">
+    <game></game>
+    <software></software>
+    <movie></movie>
+  </section>
+
+  <forum></forum>
+
+  
+

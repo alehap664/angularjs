@@ -1,0 +1,11 @@
+@media (min-width: 992px){
+  .post--wrapper{
+    width: calc(100% / 2);
+  }
+}
+
+@media (min-width: 1200px){
+  .post--wrapper{
+    width: calc(100% / 3);
+  }
+}

@@ -1,0 +1,120 @@
+
+<div class="main_wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="tab__wrapper" role="tab-games">
+        <button class="tab-active" id="tab__new_game">
+          <i class="fas fa-gamepad" aria-hidden="true"> </i><span>&nbsp;Game mới</span>
+        </button>
+        <button id="tab__top_game"> <i class="fab fa-hotjar" aria-hidden="true">
+          </i><span>&nbsp;TOP game hay</span>
+        </button>
+        <button id="tab__update_game"> <i class="fas fa-arrow-circle-up" aria-hidden="true">
+          </i><span>&nbsp;Update</span>
+        </button>
+      </div>
+      
+      <div class="tab__contain tab__contain-active " id="tab__new_game" role="tab-game-item">
+          <div class="contain_right">
+            <div class="post" ng-repeat = "game in gameNew | limitTo : 1 ">
+              <div class="post_img">
+                <a href="#!/views/game/{{game.params}}"><img ng-src="{{game.wrapper}}" alt="{{game.title}}"></a>
+              </div>
+              <div class="post_content">
+                <a class="post_content_title" href="#!/views/game/{{game.params}}">{{game.title}}</a>
+                <p class="post_content_tags">
+                    <a href="#!/game/{{tag.href}}" ng-repeat = "tag in game.tags | limitTo: 5">{{$index !== 4 ? tag.text+"," : tag.text }} </a>
+                </p>
+                <p class="post_content_text">{{game.description1}}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contain_left">
+            <div class="post" ng-repeat = "game in gameNew | limitTo : 4 : 1 ">
+              <div class="post_img">
+                <a href="#!/views/game/{{game.params}}"><img ng-src="{{game.wrapper}}" alt="{{game.title}}"></a>
+              </div>
+              <div class="post_content">
+                <a class="post_content_title" href="#!/views/game/{{game.params}}">{{game.title}}</a>
+                <p class="post_content_tags">
+                    <a href="#!/game/{{tag.href}}" ng-repeat = "tag in game.tags | limitTo: 5">{{$index !== 4 ? tag.text+"," : tag.text }} </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        
+      </div>
+
+      
+      <div class="tab__contain  " id="tab__top_game" role="tab-game-item">  
+          <div class="contain_right">
+            <div class="post" ng-repeat = "game in gameTop | limitTo : 1 ">
+              <div class="post_img">
+                <a href="#!/views/game/{{game.params}}"><img ng-src="{{game.wrapper}}" alt="{{game.title}}"></a>
+              </div>
+              <div class="post_content">
+                <a class="post_content_title" href="#!/views/game/{{game.params}}">{{game.title}}</a>
+                <p class="post_content_tags">
+                    <a href="#!/game/{{tag.href}}" ng-repeat = "tag in game.tags | limitTo: 5">{{$index !== 4 ? tag.text+"," : tag.text }} </a>
+                </p>
+                <p class="post_content_text">{{game.description1}}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contain_left">
+            <div class="post" ng-repeat = "game in gameTop | limitTo : 4 : 1 ">
+              <div class="post_img">
+                <a href="#!/views/game/{{game.params}}"><img ng-src="{{game.wrapper}}" alt="{{game.title}}"></a>
+              </div>
+              <div class="post_content">
+                <a class="post_content_title" href="#!/views/game/{{game.params}}">{{game.title}}</a>
+                <p class="post_content_tags">
+                    <a href="#!/game/{{tag.href}}" ng-repeat = "tag in game.tags | limitTo: 5">{{$index !== 4 ? tag.text+"," : tag.text }} </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        
+      </div>
+
+      
+      <div class="tab__contain  " id="tab__update_game" role="tab-game-item">
+        <div class="contain_right">
+          <div class="post" ng-repeat = "game in gameUpdate | limitTo : 1 ">
+            <div class="post_img">
+              <a href="#!/views/game/{{game.params}}"><img ng-src="{{game.wrapper}}" alt="{{game.title}}"></a>
+            </div>
+            <div class="post_content">
+              <a class="post_content_title" href="#!/views/game/{{game.params}}">{{game.title}}</a>
+              <p class="post_content_tags">
+                  <a href="#!/game/{{tag.href}}" ng-repeat = "tag in game.tags | limitTo: 5">{{$index !== 4 ? tag.text+"," : tag.text }} </a>
+              </p>
+              <p class="post_content_text">{{game.description1}}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contain_left">
+          <div class="post" ng-repeat = "game in gameUpdate | limitTo : 4 : 1 ">
+            <div class="post_img">
+              <a href="#!/views/game/{{game.params}}"><img ng-src="{{game.wrapper}}" alt="{{game.title}}"></a>
+            </div>
+            <div class="post_content">
+              <a class="post_content_title" href="#!/views/game/{{game.params}}">{{game.title}}</a>
+              <p class="post_content_tags">
+                  <a href="#!/game/{{tag.href}}" ng-repeat = "tag in game.tags | limitTo: 5">{{$index !== 4 ? tag.text+"," : tag.text }} </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </div>
+  </div>
+</div>

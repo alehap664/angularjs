@@ -1,0 +1,153 @@
+<div class="menu">
+  <div class="menu_top">
+    <div class="container">
+      <div class="row">
+        <div class="menu_top_btn">
+          <button class="sign-up">Đăng ký</button>
+          <button class="sign-in">Đăng Nhập</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu_nav">
+    <div class="container">
+      <div class="row">
+        <div class="menu_nav_logo"><a href="#!/"><img src="https://linkneverdie.com/Assets/Imgs/Logo/logo.png" alt="Logo" style="width: 100%;"></a></div>
+        <div class="menu_nav_navbar">
+          <div class="menu_nav_navbar_collapsed">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="menu_nav_navbar_items">
+            <div class="navbar_item" data-relative="true">
+              <div class="dropdown">
+                <a href="#!/">TRANG CHỦ&nbsp;</a>
+                <i class="fas fa-angle-double-down" aria-hidden="true"></i>
+                <div class="dropdown--menu col-1" id="home">
+                  <a href="#!/time-line">Lịch sử phát triển</a>
+                </div>
+              </div>
+            </div>
+            
+             <!-- 
+            ======================
+            Phần mềm
+            ======================
+            -->
+
+            <div class="navbar_item" data-relative="true">
+              <div class="dropdown"><a href="#!/software/all-software?page=1">PHẦN MỀM&nbsp;</a><i class="fas fa-angle-double-down"
+                  aria-hidden="true"></i>
+                <div class="dropdown--menu col-1">
+                  <nav>
+                    <a href="#!/software{{tag.href}}" ng-repeat = "tag in $root.category[3].tags.tags">{{tag.text}}</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            <!-- 
+            ======================
+            Game
+            ======================
+            -->
+
+            <div class="navbar_item">
+              <div class="dropdown">
+                <a href="#!/game/all-game/?page=1">GAMES&nbsp;</a>
+                <i class="fas fa-angle-double-down" aria-hidden="true"></i>
+                <div class="dropdown--menu col-2 col-5">
+
+                  <div class="menu--group">
+                    <nav>
+                      <a ng-class="{'dropdown--title': $index === 0}" href="#!/game{{tag.href}}" ng-repeat = "tag in $root.category[0].tags.action">{{tag.text}}</a>
+                    </nav>
+
+                    <nav>
+                      <a ng-class="{'dropdown--title': $index === 0}" href="#!/game{{tag.href}}" ng-repeat = "tag in $root.category[0].tags.adventure">{{tag.text}}</a>
+                    </nav>
+                  </div>
+
+                  <div class="menu--group">
+                    <nav>
+                      <a ng-class="{'dropdown--title': $index === 0}" href="#!/game{{tag.href}}" ng-repeat = "tag in $root.category[0].tags.tactic">{{tag.text}}</a>
+                    </nav>
+
+                    <nav>
+                      <a ng-class="{'dropdown--title': $index === 0}" href="#!/game{{tag.href}}" ng-repeat = "tag in $root.category[0].tags.emulator">{{tag.text}}</a>
+                    </nav>
+                  </div>
+
+                  <nav>
+                    <a ng-class="{'dropdown--title': $index === 0}" href="#!/game{{tag.href}}" ng-repeat = "tag in $root.category[0].tags.sport">{{tag.text}}</a>
+                  </nav>
+
+                  <nav>
+                    <a ng-class="{'dropdown--title': $index === 0}" ng-href="{{$index === 0 ? '' : '#!/game'+tag.href}}" ng-repeat = "tag in $root.category[0].tags.ex">{{tag.text}}</a>
+                  </nav>
+
+                  <!-- <nav>
+                    <a ng-class="{'dropdown--title': $index === 0}"  ng-href="{{$index === 0 ? '' : '#!/game'+tag.href}}" ng-repeat = "tag in $root.category[0].tags.sort">{{tag.text}}</a>
+                  </nav> -->
+
+                </div>
+              </div>
+            </div>
+
+            <!-- 
+            ======================
+            Movie
+            ======================
+            -->
+
+            <!-- <div class="navbar_item">
+              <div class="dropdown">
+                <a href="#!/movie/all-movie/?page=1">PHIM HD - BLURAY&nbsp;</a>
+                <i class="fas fa-angle-double-down" aria-hidden="true"></i>
+                <div class="dropdown--menu col-2 col-3">
+
+                  <div class="menu--group group--large">
+                    <nav>
+                      <a href="#!/movie{{tag.href}}" ng-repeat = "tag in $root.category[1].tags.tags | limitTo : 7 : 0">{{tag.text}}</a>
+                    </nav>
+
+                    <nav>
+                      <a href="#!/movie{{tag.href}}" ng-repeat = "tag in $root.category[1].tags.tags | limitTo : 7 : 7">{{tag.text}}</a>
+                    </nav>
+                  </div>
+
+                  <div class="menu--group group--large">
+                    <nav>
+                      <a href="#!/movie{{tag.href}}" ng-repeat = "tag in $root.category[1].tags.tags | limitTo : 7 : 14">{{tag.text}}</a>
+                    </nav>
+
+                    <nav>
+                      <a href="#!/movie{{tag.href}}" ng-repeat = "tag in $root.category[1].tags.tags | limitTo : 7 : 21">{{tag.text}}</a>
+                    </nav>
+                  </div>
+
+                  <nav>
+                    <a href="#!/movie{{tag.href}}" ng-repeat = "tag in $root.category[1].tags.tags | limitTo : 7 : 28">{{tag.text}}</a>
+                  </nav>
+
+                </div>
+              </div>
+            </div> -->
+
+            <div class="navbar_item">
+              <a href="#!/">DIỄN ĐÀNG</a>
+            </div>
+            
+            <div class="navbar_item">
+              <a href="#!/">FAQS</a>
+            </div>
+          </div>
+          <div class="menu_nav_navbar_search_btn">
+            <button><i class="fas fa-search" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

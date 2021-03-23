@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LinkNeverDie Clone</title>
+  <script src="https://code.angularjs.org/1.8.0/angular.js"></script>
+  <script src="https://code.angularjs.org/1.8.0/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.8.0/angular-sanitize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.8/angular-css.min.js"></script>
+  <script src="https://kit.fontawesome.com/350c27d8e4.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="./assets/stylesheets/index.css">
+  <link rel="stylesheet" href="./assets/stylesheets/responsive.css">
+</head>
+
+<body ng-app = "App">
+  <navigation></navigation>
+
+  <ng-view></ng-view>
+
+  
+  <!-- Set up -->
+  <script src="angular.js"></script>
+
+  <!-- Router -->
+  <script src="router.js"></script>
+
+  <!-- Controllers -->
+  <script src="./Reusable/navigationComponent/navigationController.js"></script>
+    <!-- Admin -->
+    <script src="./Components/adminComponent/adminController.js"></script>
+    <!-- index -->
+    <script src="./Components/indexComponent/gameController.js"></script>
+    <script src="./Components/indexComponent/softWareController.js"></script>
+    <!-- <script src="./Components/indexComponent/movieController.js"></script> -->
+    <script src="./Components/indexComponent/forumController.js"></script>
+    <!-- Page -->
+    <script src="./Components/pageComponent/indexController.js"></script>
+    <script src="./Components/pageComponent/postController.js"></script>
+    <script src="./Components/pageComponent/paginationController.js"></script>
+    <!-- post -->
+    <script src="./Components/postComponent/indexController.js"></script>
+    <script src="./Components/postComponent/leftController.js"></script>
+    <script src="./Components/postComponent/rightController.js"></script>
+  
+
+</body>
+</html>

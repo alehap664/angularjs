@@ -1,0 +1,72 @@
+<div class="license">
+  <div class="license__title">
+    <p>Mua bản quyền {{$parent.post.about[0].infoDetail}}</p>
+  </div>
+  <div class="license__body">
+    <p>Nếu thấy {{$parent.post.about[0].infoDetail}} {{$parent.post.title}} hay thì nhớ mua bản quyền {{$parent.post.about[0].infoDetail}} ủng hộ nhà phát triển các bạn nhé</p>
+    <a href="#" class="license__steam"><i class="fab fa-steam" aria-hidden="true"></i>Steam</a>
+  </div>
+</div>
+
+<div class="about">
+  <div class="about__title">
+    <p>Thông tin {{$parent.post.about[0].infoDetail}}</p>
+  </div>
+
+  <ul class="about__body">
+    <li ng-repeat = "about in $parent.post.about">
+      <p class="about__label">{{about.infoName}}:</p>
+      <p class="about__info">{{about.infoDetail | date: "dd/MM/yyyy"}}</p>
+    </li>
+  </ul>
+
+</div>
+
+<div class="other">
+  <div class="other__item">
+    <span class="other__label">
+      <i class="fas fa-eye pcolor" style="color: rgb(6, 116, 236);"></i>views
+    </span>
+    <span class="other__info">{{$parent.post.other.views}}</span>
+  </div>
+
+  <div class="other__item">
+    <span class="other__label">
+      <i class="fas fa-heart scolor" style="color: rgb(232, 62, 140);"></i>like
+    </span>
+    <span class="other__info">{{$parent.post.other.like}}</span>
+  </div>
+
+  <div class="other__item">
+    <span class="other__label">
+      <i class="fas fa-comment mcolor3" style="color: rgb(88, 201, 233);"></i>comment
+    </span>
+    <span class="other__info">{{$parent.post.other.comment}}</span>
+  </div>
+
+  <div class="other__item">
+    <span class="other__label">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </span>
+    <span class="other__info">(??? đánh giá)</span>
+  </div>
+</div>
+
+<div class="tags">
+  <div class="tags__title">
+    <p>Thể loại</p>
+  </div>
+
+  <div class="tags__body">
+    <ul class="tags__links">
+      <li ng-repeat = "tag in $parent.post.tags">
+        <a href="#!/{{category}}/{{tag.href}}">{{tag.text}}</a>
+      </li>
+     
+    </ul>
+  </div>
+</div>

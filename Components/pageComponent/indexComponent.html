@@ -1,0 +1,42 @@
+<section class="header">
+  <div class="container"> 
+    <div class="row">
+      <div ng-switch = "category">
+        <div class="category">
+          <li><a href="#!/">Trang chủ</a></li>
+          <li ng-switch-when="game" ng-show = 'path !== "/search"'><a href="#!/game/all-game">Game</a></li>
+          <li ng-switch-when="software" ng-show = 'path !== "/search"'><a href="#!/software/all-software">Soft Ware</a></li>
+          <li ng-switch-when="movie" ng-show = 'path !== "/search"'><a href="#!/movie/all-movie">Movie</a></li>
+
+          <li ng-show = 'path === "/search"'><a>Tìm kiếm</a></li>
+
+          <li ng-switch-default><a>Tất cả</a></li>
+          <li ng-show = "path === '/search' && category  !== ''"><a>{{category}}</a></li>
+
+          <li ng-show = "search !== '' && search !== undefined"><a>{{search}}</a></li>
+          
+          <li ng-hide = 
+          "tag === 'all-game' || tag === 'all-software' || tag === 'all-movie' || path === '/search'"  
+          ><a href="#!/{{category}}/{{tag}}?page=1">{{tag}}</a></li>
+          
+        </div>
+        <div class="page-title" ng-switch-when="game" ng-show = 'path !== "/search"'><span>Tổng Hợp Các Game</span></div>
+        <div class="page-title" ng-switch-when="software" ng-show = 'path !== "/search"'><span>Tổng Hợp Các Phần Mềm</span></div>
+        <div class="page-title" ng-switch-when="movie" ng-show = 'path !== "/search"'><span>Tổng Hợp Các Phim</span></div>
+        <div class="page-title" ng-show = 'path === "/search"'><span>Bạn đang tìm kiếm từ khóa: {{search}}</span></div>
+        <div class="page-title" ng-show = 'path === "/search"'><span>Category: {{category}}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main">
+  <div class="main_wrapper">
+    <div class="container">
+      <post></post>
+      
+      <pagination></pagination>
+      
+    </div>
+  </div>
+</section>

@@ -1,0 +1,103 @@
+<div class="content">
+  <!-- <div>
+    {{$parent.post}}
+  </div> -->
+  <div class="content__img">
+    <img
+      src="{{$parent.post.wrapper}}"
+      alt="">
+  </div>
+
+  <div class="content__blog">{{$parent.post.title}}</div>
+
+  <div class="content__description" ng-bind-html = "$parent.post.description2">
+  </div>
+
+
+  <div class="content__youtube"  ng-hide = "!$parent.post.youtube">
+    <iframe ng-src="{{($parent.post.youtube)}}"></iframe>
+  </div>
+
+
+</div>
+
+<div class="slide" ng-hide = "!$parent.post.postSlide">
+  <div class="slide__wrapper--screenshots">
+    <div class="slide__img--screenshots" ng-repeat = "slide in $parent.post.postSlide">
+      <img ng-src="{{slide}}" alt="anh_{{$index+1}}">
+    </div>
+  </div>
+  <div class="slide__wrapper--thumbs">
+    <div class="slide__img--thumbs" ng-repeat = "slide in $parent.post.postSlide">
+      <img ng-src="{{slide}}" alt="anh_{{$index+1}}">
+    </div>
+  </div>
+</div>
+
+<div class="system">
+  <div class="system__header" ng-switch = "$parent.post.about[0].infoDetail">
+    <p>Cấu hình để <span ng-switch-when = "Game" style="font-size: 22px;">chơi</span><span ng-switch-when = "Phần mềm" style="font-size: 22px;">dùng</span> {{$parent.post.about[0].infoDetail}} {{$parent.post.title}}</p>
+  </div>
+  <div class="system__body">
+    <ul>
+      <li><strong>MINIMUM</strong></li>
+      <li>
+        <ul>
+          <li><strong>OS:</strong> ???</li>
+          <li><strong>Processor:</strong> ???</li>
+          <li><strong>Memory:</strong> ???</li>
+          <li><strong>Graphics:</strong> ???</li>
+          <li><strong>DirectX®:</strong> ???</li>
+          <li><strong>Network:</strong> ???</li>
+          <li><strong>Storage:</strong> ???</li>
+          <li><strong>Sound:</strong> ???</li>
+        </ul>
+      </li>
+
+    </ul>
+    <ul>
+      <li><strong>MAXIMUM</strong></li>
+      <li>
+        <ul>
+          <li><strong>OS:</strong> ???</li>
+          <li><strong>Processor:</strong> ???</li>
+          <li><strong>Memory:</strong> ???</li>
+          <li><strong>Graphics:</strong> ???</li>
+          <li><strong>DirectX®:</strong> ???</li>
+          <li><strong>Network:</strong> ???</li>
+          <li><strong>Storage:</strong> ???</li>
+          <li><strong>Sound:</strong> ???</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="download">
+  <div class="download__title">
+    <p style="font-size: 22px;">Link tải {{$parent.post.title}} </p>
+    <p style="color: var(--red-old); margin-top: 15px; font-size: 18px;">
+      Dung lượng: ??? GB
+    </p>
+  </div>
+
+  <div class="download__body">
+    <div class="tab__wrapper" role="tab-download">
+
+      <button ng-class="$index === 0 ? 'tab-active' : '' " id="tab_{{$index+1}}" ng-repeat = "source in $parent.post.source">
+        <span>{{source.sourceTitle}}</span>
+      </button>
+
+    </div>
+
+
+    <div ng-class="{'tab__contain' : true, 'tab__contain-active' : $index === 0 }" id="tab_{{$index+1}}" role="tab-download-item" ng-repeat = "source in $parent.post.source">
+      <a href="">Download with {{source.sourceTitle}}</a>
+    </div>
+
+    <div class="download__footer">
+      <a href="https://linkneverdie.com/Download/80de86ee-dc87-468d-ace1-32579720d1bd">Video hướng dẫn chung cho tất cả
+        các {{$parent.post.about[0].infoDetail}}</a>
+    </div>
+  </div>
+</div>

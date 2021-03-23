@@ -1,0 +1,221 @@
+<section class="main">
+  <div class="main_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="tab__wrapper" role="tab-admin">
+          <button class="tab-active" id="tab__game">
+            <i class="fas fa-gamepad" aria-hidden="true"> </i><span>&nbsp;Game</span>
+          </button>
+          <button id="tab__software"> <i class="fab fa-hotjar" aria-hidden="true">
+            </i><span>&nbsp;Phần Mềm</span>
+          </button>
+          <button id="tab__add"> <span>&nbsp;Thêm</span>
+          </button>
+        </div>
+        
+        <div class="tab__contain tab__contain-active " id="tab__game" role="tab-admin">
+           <div class="post__wrapper" ng-repeat = "game in $root.ADMIN_GAME | limitTo: 5 : skipGame">
+             <div class="post">
+               <div class="post__img">
+                 <img ng-src="{{game.wrapper}}" alt="{{game.title}}">
+               </div>
+               <div class="post__content">
+                 <div class="post__title">
+                   <p>{{game.title}}</p>
+                 </div>
+                 <div class="post__tags">
+                   <span ng-repeat = "tag in game.tags | limitTo: 5">{{tag.text}} | </span>
+                 </div>
+                 <div class="post__description">
+                   <p>{{game.description1}}</p>
+                 </div>
+                 <div class="post__btn">
+
+                 </div>
+               </div>
+
+             </div>
+           </div>
+           
+
+           <div class="pagination">
+            <ul>
+              <li ng-repeat = "page in $root.ADMIN_GAME_PAGINATION"><a href="" ng-click = "paginationGame(page)" ng-class = "{'page--active': currentPageGame === page}">{{page}}</a></li>
+            </ul>
+          </div>
+        </div>
+
+        
+        <div class="tab__contain  " id="tab__software" role="tab-admin">  
+          <div class="post__wrapper" ng-repeat = "game in $root.ADMIN_SOFTWARE | limitTo: 5 : skipSoftWare">
+            <div class="post">
+              <div class="post__img">
+                <img ng-src="{{game.wrapper}}" alt="{{game.title}}">
+              </div>
+              <div class="post__content">
+                <div class="post__title">
+                  <p>{{game.title}}</p>
+                </div>
+                <div class="post__tags">
+                  <span ng-repeat = "tag in game.tags | limitTo: 5">{{tag.text}} | </span>
+                </div>
+                <div class="post__description">
+                  <p>{{game.description1}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="pagination">
+           <ul>
+             <li ng-repeat = "page in $root.ADMIN_SOFTWARE_PAGINATION"><a href="" ng-click = "paginationSoftWare(page)" ng-class = "{'page--active': currentPageSoftWare === page}">{{page}}</a></li>
+             
+           </ul>
+         </div>
+        </div>
+
+        <div class="tab__contain  " id="tab__add" role="tab-admin">
+          
+          <div class="add__wrapper">
+            <from class="add">
+              <div class="add__img">
+                <input type="text" ng-model = "addImg" placeholder="URL IMG">
+                <img ng-src="{{addImg}}" alt="">
+              </div>
+              <div class="add__body">
+                <div class="add__body--left">
+                  <label for="title">Title</label>
+                  <input type="text" name="title" id="title" placeholder="Tiêu đề">
+
+                  <label for="description">Description</label>
+                  <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+                  
+                  <label for="youtube">Youtube</label>
+                  <input type="text" name="youtube" id="youtube" placeholder="Youtube">
+                  
+                  <label for="slide">Slide</label>
+                  <textarea name="slide" id="slide" cols="30" rows="10" 
+                    placeholder="Slide ( Lưu Ý: Mỗi url phân biệt nhau bởi dấu ',' )"></textarea>
+                
+                </div>
+                <div class="add__body--right">
+                  <label>Thông tin</label>
+                  <div class="group__wrapper">
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Thể Loại</label>
+                        <input type="text" name="" id="" placeholder="Thể Loại">
+                      </div>
+                    </div>
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Phát Hành</label>
+                        <input type="date" name="" id="" placeholder="Phát Hành">
+                      </div>
+                    </div>
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Cập Nhật</label>
+                        <input type="date" name="" id="" placeholder="Cập Nhật">
+                      </div>
+                    </div>
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Phát Triển</label>
+                        <input type="text" name="" id="" placeholder="Phát Triển">
+                      </div>
+                    </div>
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Xuất Bản</label>
+                        <input type="text" name="" id="" placeholder="Xuất Bản">
+                      </div>
+                    </div>
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Loạt Game</label>
+                        <input type="text" name="" id="" placeholder="Loạt Game">
+                      </div>
+                    </div>
+                    <div class="about__wrapper">
+                      <div class="about">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Multiplayer</label>
+                        <input type="text" name="" id="" placeholder="Multiplayer">
+                      </div>
+                    </div>
+                  </div>
+
+                  <label>Thể Loại</label>
+                  <div class="group__wrapper">
+                    <p>Game</p><br />
+                    <div class="tags__wrapper">
+                      <div class="tag" ng-repeat = "item in $root.category[0].tags.action">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                      <div class="tag" ng-repeat = "item in $root.category[0].tags.adventure">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                      <div class="tag" ng-repeat = "item in $root.category[0].tags.tactic">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                      <div class="tag" ng-repeat = "item in $root.category[0].tags.emulator">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                      <div class="tag" ng-repeat = "item in $root.category[0].tags.sport">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                      <div class="tag" ng-repeat = "item in $root.category[0].tags.ex">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                    </div>
+                    <br />
+                    <p>Phần mềm</p><br />
+                    <div class="tags__wrapper">
+                      <div class="tag" ng-repeat = "item in $root.category[3].tags.tags">
+                        <input type="checkbox" name="" id="tag"/> {{item.text}}
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                  <label>Other</label>
+                  <div class="group__wrapper">
+                    <div class="other__wrapper">
+                      <div class="other">
+                        <label for="">Views</label>
+                        <input type="number" min="0" name="" id="" placeholder="Views">
+                      </div>
+                    </div>
+                    <div class="other__wrapper">
+                      <div class="other">
+                        <label for="">Like</label>
+                        <input type="number" min="0" name="" id="" placeholder="Like">
+                      </div>
+                    </div>
+                    <div class="other__wrapper">
+                      <div class="other">
+                        <label for="">Comment</label>
+                        <input type="number" min="0" name="" id="" placeholder="Comment">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </from>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+
+<div class="row" ng-hide = "$root.PAGINATION.length === 1">
+  <div class="pagination-area">
+    <div class="navigation"> 
+      <ul ng-hide = "$root.PAGINATION.length === 0">
+        <!-- First -->
+        <li ng-hide = "$parent.currentPage === 1">
+
+          <!-- Search -->
+          <a href="#!/search?search={{$parent.search}}&category={{$parent.category}}&tag={{$parent.tag}}&page=1" ng-show = "$parent.path === '/search' ">
+            <i class="far fa-arrow-alt-circle-left"></i>
+          </a>
+
+          <!-- Post -->
+          <a href="#!/{{$parent.category}}/{{$parent.tag}}?page=1" ng-hide = "$parent.path === '/search' ">
+            <i class="far fa-arrow-alt-circle-left"></i>
+          </a>
+        </li> 
+        <!-- Page -->
+        <li ng-repeat = "page in $root.PAGINATION | limitTo: 5 : skip">
+
+          <!-- Search -->
+          <a href="#!/search?search={{$parent.search}}&category={{$parent.category}}&tag={{$parent.tag}}&page={{page}}" ng-class="{'page-active' : page === $parent.currentPage}" ng-show = "$parent.path === '/search' ">{{page}}</a>
+          
+          <!-- Post -->
+          <a href="#!/{{$parent.category}}/{{$parent.tag}}?page={{page}}" ng-class="{'page-active' : page === $parent.currentPage}" ng-hide = "$parent.path === '/search' ">{{page}}</a>
+        </li>
+        
+        <!-- Last -->
+        <li ng-hide = "$parent.currentPage === $root.PAGINATION.length">
+          <!-- Search -->
+          <a href="#!/search?search={{$parent.search}}&category={{$parent.category}}&tag={{$parent.tag}}&page={{$root.PAGINATION.length}}" ng-show = "$parent.path === '/search' ">
+            <i class="far fa-arrow-alt-circle-right"></i>
+          </a>
+
+          <!-- Post -->
+          <a href="#!/{{$parent.category}}/{{$parent.tag}}?page={{$root.PAGINATION.length}}" ng-hide = "$parent.path === '/search' ">
+            <i class="far fa-arrow-alt-circle-right"></i>
+          </a>
+        </li> 
+      </ul>
+    </div>
+  </div>
+</div>

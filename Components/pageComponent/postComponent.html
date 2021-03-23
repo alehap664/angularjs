@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="post--wrapper" ng-repeat = "post in $root.GAMES_PAGE | limitTo: 15 : start">
+    <div class="post" ng-switch = "post.about[0].infoDetail">
+      <div class="post_img">
+        <a href="#!/views/software/{{post.params}}" ng-switch-when = "Phần mềm"><img ng-src="{{post.wrapper}}" alt="The Cave"></a>
+        <a href="#!/views/game/{{post.params}}" ng-switch-when = "Game"><img ng-src="{{post.wrapper}}" alt="The Cave"></a>
+      </div>
+      <div class="post_content">
+        <a class="post_content_title" href="#!/views/software/{{post.params}}" ng-switch-when = "Phần mềm">{{post.title}}</a>
+        <a class="post_content_title" href="#!/views/game/{{post.params}}" ng-switch-when = "Game">{{post.title}}</a>
+        <p class="post_release"> Ngày phát hành:{{post.about[1].infoDetail | date: "dd/MM/yyyy"}}
+        </p>
+        <p class="post_content_tags">
+          <a href="#!/game/{{tag.href}}" ng-switch-when = "Game" ng-repeat = "tag in post.tags | limitTo: 5">{{tag.text}}, </a>
+          <a href="#!/software/{{tag.href}}" ng-switch-when = "Phần mềm" ng-repeat = "tag in post.tags | limitTo: 5">{{tag.text}}, </a>
+        </p>
+      </div>
+      <div class="post_meta"> 
+        <div class="rating">
+          <ul>
+            <li><span class="fas fa-star" aria-hidden="true"></span></li>
+            <li><span class="fas fa-star" aria-hidden="true"></span></li>
+            <li><span class="fas fa-star" aria-hidden="true"></span></li>
+            <li><span class="fas fa-star" aria-hidden="true"></span></li>
+            <li><span class="fas fa-star" aria-hidden="true"></span></li>
+          </ul>
+        </div>
+        <div class="other">
+          <ul>
+            <li><span class="fas fa-heart scolor post--like" aria-hidden="true"></span>
+              <span>{{post.other.like}}</span>
+            </li>
+            <li><span class="fas fa-comment mcolor3 post--comment" aria-hidden="true"></span>
+              <span>{{post.other.comment}}</span>
+            </li>
+            <li><span class="fas fa-eye pcolor post--view" aria-hidden="true"></span>
+              <span>{{post.other.views}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="not__found" ng-hide = "$root.found">
+    <p>Không tìm thấy</p>
+  </div>
+</div>

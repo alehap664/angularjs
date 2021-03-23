@@ -1,0 +1,313 @@
+@media (min-width: 576px){
+  .container{
+    max-width: 540px;
+  }
+}
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+@media (min-width: 768px){
+  .menu_nav .row{
+    flex-wrap: nowrap;
+  }
+  .container{
+    max-width: 720px;
+    position: relative ;
+    z-index: 1;
+  }
+
+  .menu_nav_logo{
+    display: block;
+    flex: 0 0 25%;
+    order: 1;
+  }
+  .menu_nav_navbar{
+    flex: 0 0 75%;
+    order: 2;
+    flex-flow: row nowrap;
+    /* position: relative; */
+  }
+  .menu_nav_navbar_collapsed{display: none;}
+  .menu_nav_navbar_search_btn{
+    flex: auto;
+    order: 3;
+  }
+  .menu_nav_navbar_items{
+    order: 2;
+    flex: 90%;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    background-color: white;
+    display: flex !important;
+
+  }
+  .navbar_item{
+    display: flex;
+  }
+  .navbar_item> a{
+    padding: 0 10px;
+  }
+  /* Menu title size */
+  .navbar_item>a,
+  .navbar_item>div>a{
+    font-size: 14px ;
+  }
+
+  [data-relative='true']{
+    position: relative;
+  }
+  [data-relative='true']>.dropdown>.dropdown--menu{
+    width: 200%;
+  }
+  .dropdown>i,
+  .dropdown>a{
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .dropdown > *:not(.dropdown--menu) {
+    padding: 0;
+  } 
+  .dropdown--menu{
+    display: flex;
+    margin: 0 !important;
+    flex-flow: row nowrap;
+    position: absolute;
+    width: 720px ;
+    padding: 15px;
+    top: calc(100% + 30px);
+    left: 0%;
+    visibility: hidden;
+    transition: 0.3s ease;
+    opacity: 0;
+    border: 1px solid #0674ec;
+    border-style: solid none none none;
+  }
+  /* Chiều rộng mỗi cột danh mục */
+  .col-5 > *{
+    width: calc(100% / 5);
+  }
+  .col-3 > *{
+    width: calc(100% / 3);
+  }
+  [data-relative='true']:hover .dropdown--menu{
+    display: flex ;
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+  }
+  .navbar_item:not([data-relative='true']):hover .dropdown--menu{
+    display: flex ;
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+  }
+
+  .dropdown--menu a{
+    text-align: left;
+  }
+  .menu--group>nav{
+    height: 50%;
+  }
+ 
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+  .header_content{
+    height: 400px;
+    top: 40%;
+  }
+  span.slogan_title,
+  span.slogan_content,
+  span.slogan_mini_content{
+    font-size: 50px;
+    line-height: 90px;
+  }
+  span.slogan_mini_content{
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .header_search_box{height: 200px;}
+
+  form{
+    flex-flow: row wrap;
+    margin: 30px 15px;
+  }
+  .text_field{
+    border-radius: 5px 0px 0px 5px;
+  }
+  .select_field{
+    border-radius: 0px 5px 5px 0px;
+    border-style: solid solid solid none;
+  }
+  .text_field,
+  .select_field{
+    flex: 50%;
+    margin: 0;
+  }
+  .search_box_search_btn{flex: 100%;}
+
+  .main_wrapper{
+    margin:0 0 100px;
+  }
+  .tab__wrapper{
+    flex-flow: row nowrap;
+    align-items: stretch;
+    
+  }
+  .tab__wrapper>button{
+    padding: 20px 40px;
+    flex: 0 0 auto;
+    color: black;
+    border: 1px solid #ececec;
+    margin: 0 0 -1px 0;
+  }
+  
+  .tab__contain{
+    flex-flow: row nowrap;
+    height: 90%;
+    
+  }
+  .contain_right,
+  .contain_left{
+    flex: 1 0 50%;
+    height: 100%;
+  }
+  .contain_left>.post{
+    width: 50%;
+  }
+  .contain_left .post_img{
+    height: 30% !important;
+  }
+  .tab__contain[role="tab-movie-item"]>.post{
+    height: 100%;
+  }
+  .post_content>.post_content_title{
+    font-size: 120%;
+  }
+  .post_content>.post_content_tags>a,
+  .post_content>.post_content_text{
+    font-size: 90% ;
+  }
+
+
+
+  .forum_content_item_info{
+    flex: 0 0 65%;
+  }
+
+  .forum_content_item_meta{
+    flex: 0 0 35%;
+    padding: 0 30px 0 0  !important;
+  }
+
+  .forum_content_item_meta>div{
+    flex: 0 0 48%;
+  }
+}
+
+
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+
+@media (min-width: 992px){
+  .container{
+    max-width: 960px;
+  }
+  
+  .navbar_item>a,
+  .navbar_item>div>a{
+    font-size: 15px !important;
+  }
+  .dropdown--menu{
+    width: 960px ;
+  }
+  .dropdown--menu a{
+    font-size: 14px ;
+  }
+  .header_content{
+    height: 250px;
+  }
+  span.slogan_title,
+  span.slogan_content,
+  span.slogan_mini_content{
+    font-size: 50px;
+    line-height: 80px;
+  }
+  span.slogan_mini_content{
+    font-size: 20px;
+    line-height: 100px;
+  }
+  .header_search_box{
+    height: 135px;
+  }
+  form{
+    margin: 40px 25px;
+  }
+  .text_field,
+  .select_field,
+  .search_box_search_btn{
+    margin: 0;
+  }
+  .text_field{
+    flex: 60%;
+    border-radius: 5px 0 0 5px;
+  }
+  .select_field{
+    flex: 12%;
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+  }
+  .search_box_search_btn{
+    flex: 20%;
+    margin-left: 30px;
+  }
+  .search_box_search_btn>button{
+    width: 100%;
+  }
+  .contain_left .post_img{
+    height: 46% !important;
+  }
+ 
+  .forum_content_item_info{
+    flex: 0 0 75%;
+  }
+
+  .forum_content_item_meta{
+    flex: 0 0 25%;
+    padding: 0 30px 0 0  !important;
+  }
+
+  .forum_content_item_meta>div{
+    flex: 0 0 48%;
+  }
+
+}
+
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+
+@media (min-width: 1200px){
+  .container{
+    max-width: 1140px;
+  }
+  .navbar_item>*{
+    align-items: center;
+  }
+  .navbar_item{
+    align-items: center;
+  }
+  .dropdown--menu{
+    width: 1140px;
+  }
+  .dropdown>i,
+  .dropdown>a{
+    flex: 0 0 auto;
+  }
+  .contain_left .post_img{
+    height: 55% !important;
+  }
+}
+
